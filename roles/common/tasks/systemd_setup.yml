@@ -2,7 +2,7 @@
   ansible.builtin.copy:
     src: "{{  component_name }}.service "
     dest: /etc/systemd/system/{{ component_name }}.service
-    remote_src: no
+    # remote_src: no
 
 - name: start service
   ansible.builtin.systemd_service:
