@@ -13,3 +13,8 @@
     ansible.builtin.dnf:
       name: nginx
       state: present
+
+  - name: start nginx
+    ansible.builtin.systemd_service: 
+      state: started
+      name: nginx
