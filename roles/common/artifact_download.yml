@@ -10,7 +10,7 @@
 - name: create app content directroy
   ansible.builtin.file:
     path: /app
-    state: directroy
+    state: directory
 
 - name: downaload and extract app content
   ansible.builtin.unarchive:
