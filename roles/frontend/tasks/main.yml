@@ -10,8 +10,9 @@
         state: present
   
     - name: copy nginx congfig file 
-      ansible.builtin.copy: nginx.conf
-      dest: /etc/nginx/nginx.config
+      ansible.builtin.copy: 
+        src: nginx.conf
+        dest: /etc/nginx/nginx.config
 
     - name: Remove old folder
       ansible.builtin.file:
